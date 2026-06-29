@@ -1,0 +1,80 @@
+
+
+.header{
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    text-align: center; 
+    padding: 10px;
+    background-color:cornsilk;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.imagecontainer{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 30px;
+  
+}
+.imagecard{
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.imagecard:hover{
+    transform: scale(105%);
+    cursor: pointer;
+}
+
+.image{
+width: 100%;
+height: 250px;
+object-fit: cover;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+}
+
+.imagecard h2{
+    margin-top: 10px;
+    padding-left: 15px;
+}
+
+.imagecard p{
+    margin-top: 2px;
+    padding-left: 15px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+@media (max-width: 1024px){
+.imagecontainer {
+        grid-template-columns: repeat(3, 1fr);
+        
+}
+}
+
+
+@media (max-width: 768px) {
+    .imagecontainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 576px) {
+    .imagecontainer {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 400px) {
+    .imagecontainer {
+        padding: 10px;
+        gap: 15px;
+    }
+}
